@@ -1,6 +1,6 @@
 {
     "name": "thehilkiah/php-pardot-api",
-    "description": "An API wrapper for the Pardot (a salesforce.com company) API.",
+    "description": "An API wrapper for the Pardot API.",
     "license": "MIT",
     "authors": [
         {
@@ -12,8 +12,8 @@
 
     },
     "autoload": {
-        "psr-0": {
-            "Pardot": "src/"
+        "psr-4": {
+            "Pardot\\": "src/"
         }
     }
 }
