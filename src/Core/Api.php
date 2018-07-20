@@ -1,4 +1,4 @@
-<?php namespace Pardot;
+<?php namespace Pardot\Core;
 
 /**
  * Class API
