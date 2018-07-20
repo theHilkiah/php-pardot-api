@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 
 // namespace config
 use Pardot\Core\API as PardotAPI;
-use Pardot\Core\API as PardotConfig;
+use Pardot\Core\Config as PardotConfig;
 
 //See Config source for more details
 $pardot_config = new PardotConfig(
