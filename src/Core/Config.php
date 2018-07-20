@@ -1,5 +1,5 @@
 <?php
-namespace Pardot;
+namespace Pardot\Core;
 /**
  * Class Config
  *
