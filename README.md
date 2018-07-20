@@ -4,7 +4,7 @@ php-pardot-api
 PHP wrapper for the Pardot RESTful API
 
 # Requirements #
-1. PHP 5.3.*
+1. PHP 5.6
 2. cURL library installed
 3. Install directory should be writable (not required, but strongly encouraged)
 
@@ -25,8 +25,9 @@ The <code>$object</code> and <code>$operation</code> values are the constants re
 <code>
 &lt;?php
 // namespace config
-use \Pardot\API as API;
-$pardot_config = new \Pardot\Config(
+use Pardot\Core\API as PardotAPI;
+use Pardot\Core\API as PardotConfig;
+$pardot_config = new PardotConfig(
     array(
     'email' => "<YOUR PARDOT EMAIL>",
     'password' => "<YOUR PARDOT PASSWORD>",
@@ -34,7 +35,7 @@ $pardot_config = new \Pardot\Config(
     )
 );
 // get all prospects updated within the last 2 hours
-$prospects = API::Instance($pardot_config)->queryObject(API::OBJ_PROSPECT, array('updated_after' => '2 hours ago'));
+$prospects = PardotAPI::Instance($pardot_config)->queryObject(API::OBJ_PROSPECT, array('updated_after' => '2 hours ago'));
 var_dump($prospects);
 </code>
 </pre>
