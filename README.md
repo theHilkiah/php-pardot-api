@@ -13,7 +13,7 @@ PHP wrapper for the Pardot RESTful API
 2. Set the debug mode and logging settings in the pardot_config.php file (optional)
 
 # Usage #
-1. Set the namespace: <code>use \Pardot\API as API;</code>
+1. Set the namespace: <code>use Pardot\Core\API as PardotAPI;</code>
 2. Make requests using the 3 main request functions:
 	1. <code>doOperationById($object, $operation, $id = null, $parameters = null)</code>
 	2. <code>doOperationByField($object, $operation, $field = null, $fieldValue = null, $parameters = null)</code>
@@ -35,7 +35,7 @@ $pardot_config = new PardotConfig(
     )
 );
 // get all prospects updated within the last 2 hours
-$prospects = PardotAPI::Instance($pardot_config)->queryObject(API::OBJ_PROSPECT, array('updated_after' => '2 hours ago'));
+$prospects = PardotAPI::Instance($pardot_config)->queryObject(PardotAPI::OBJ_PROSPECT, array('updated_after' => '2 hours ago'));
 var_dump($prospects);
 </code>
 </pre>
